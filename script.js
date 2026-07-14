@@ -9,11 +9,10 @@
   };
 
   function setLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(function (el) {
+    document.querySelectorAll('body [data-lang]').forEach(function (el) {
       el.hidden = el.getAttribute('data-lang') !== lang;
     });
     document.documentElement.setAttribute('lang', lang);
-    document.documentElement.setAttribute('data-lang', lang);
     document.title = titles[lang] || titles.en;
 
     langButtons.forEach(function (btn) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-lang="en">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,6 +116,7 @@
             <span class="tag">PostgreSQL</span>
             <span class="tag">n8n</span>
             <span class="tag">Playwright</span>
+            <span class="tag">Gemini API</span>
           </div>
         </div>
 
@@ -164,15 +165,14 @@
 
       <div class="findings-list">
 
-        <!-- TG-01 SEPA -->
+        <!-- SEPA -->
         <article class="finding reveal">
           <div class="finding-head">
-            <span class="finding-id">TG-01</span>
             <span class="finding-name">SEPA</span>
           </div>
           <p class="finding-target">
-            <span data-lang="en"><b>Target:</b> coordinate multi-step penetration testing campaigns without juggling a dozen disconnected scripts.</span>
-            <span data-lang="fr" hidden><b>Cible&nbsp;:</b> piloter des campagnes de pentest multi-étapes sans jongler entre une dizaine de scripts déconnectés.</span>
+            <span data-lang="en">Coordinating multi-step penetration testing campaigns usually means juggling a dozen disconnected scripts.</span>
+            <span data-lang="fr" hidden>Piloter des campagnes de pentest multi-étapes veut souvent dire jongler entre une dizaine de scripts déconnectés.</span>
           </p>
           <div class="chain mono">
             <span class="chain-step">Telegram</span><span class="chain-arrow">→</span>
@@ -190,15 +190,14 @@
           </div>
         </article>
 
-        <!-- TG-02 DAST -->
+        <!-- DAST Recon Agent -->
         <article class="finding reveal">
           <div class="finding-head">
-            <span class="finding-id">TG-02</span>
             <span class="finding-name"><span data-lang="en">DAST Recon Agent</span><span data-lang="fr" hidden>Agent de recon DAST</span></span>
           </div>
           <p class="finding-target">
-            <span data-lang="en"><b>Target:</b> turn hours of manual reconnaissance into one repeatable pipeline.</span>
-            <span data-lang="fr" hidden><b>Cible&nbsp;:</b> transformer des heures de reconnaissance manuelle en un pipeline unique et reproductible.</span>
+            <span data-lang="en">Manual reconnaissance is repetitive: the same handful of tools, run by hand, on every new target.</span>
+            <span data-lang="fr" hidden>La reconnaissance manuelle est répétitive&nbsp;: les mêmes outils, lancés à la main, sur chaque nouvelle cible.</span>
           </p>
           <div class="chain mono">
             <span class="chain-step">subfinder</span><span class="chain-arrow">→</span>
@@ -217,42 +216,39 @@
           </div>
         </article>
 
-        <!-- TG-03 OSINT -->
+        <!-- CodeGenerator -->
         <article class="finding reveal">
           <div class="finding-head">
-            <span class="finding-id">TG-03</span>
-            <span class="finding-name"><span data-lang="en">Email OSINT Toolkit</span><span data-lang="fr" hidden>Toolkit OSINT email</span></span>
+            <span class="finding-name">CodeGenerator</span>
           </div>
           <p class="finding-target">
-            <span data-lang="en"><b>Target:</b> consolidate email exposure and reputation checks normally spread across five separate tools.</span>
-            <span data-lang="fr" hidden><b>Cible&nbsp;:</b> regrouper les vérifications d'exposition et de réputation d'une adresse email, réparties d'habitude sur cinq outils différents.</span>
+            <span data-lang="en">Most code-generation tools stop at a first draft and leave the testing and fixing to you.</span>
+            <span data-lang="fr" hidden>La plupart des outils de génération de code s'arrêtent au premier jet et laissent les tests et corrections à ta charge.</span>
           </p>
           <div class="chain mono">
-            <span class="chain-step">holehe</span><span class="chain-arrow">→</span>
-            <span class="chain-step">sherlock</span><span class="chain-arrow">→</span>
-            <span class="chain-step">h8mail</span><span class="chain-arrow">→</span>
-            <span class="chain-step">Shodan</span><span class="chain-arrow">→</span>
-            <span class="chain-step">GHunt</span>
+            <span class="chain-step">Prompt</span><span class="chain-arrow">→</span>
+            <span class="chain-step"><span data-lang="en">Generate</span><span data-lang="fr" hidden>Génération</span></span><span class="chain-arrow">→</span>
+            <span class="chain-step"><span data-lang="en">Self-Test</span><span data-lang="fr" hidden>Auto-test</span></span><span class="chain-arrow">→</span>
+            <span class="chain-step"><span data-lang="en">Refine</span><span data-lang="fr" hidden>Raffinement</span></span><span class="chain-arrow">→</span>
+            <span class="chain-step">↻ <span data-lang="en">Repeat</span><span data-lang="fr" hidden>Répéter</span></span>
           </div>
           <div class="finding-body">
-            <p data-lang="en">A single toolkit that runs an email address through breach data, account-existence checks, and infrastructure lookups in one pass — built to speed up the OSINT phase of an engagement.</p>
-            <p data-lang="fr" hidden>Un toolkit unique qui fait passer une adresse email par des vérifications de fuites de données, d'existence de comptes et de lookups infrastructure en une seule passe — pensé pour accélérer la phase OSINT d'un engagement.</p>
+            <p data-lang="en">CodeGenerator (shipped as InfiniteChatBot) takes a plain-language prompt and runs it through a continuous loop — generate, self-test, evaluate, refine — powered by Gemini, with no human input between cycles. Every iteration is logged to disk, so the path from first draft to final version stays inspectable, not just the end result.</p>
+            <p data-lang="fr" hidden>CodeGenerator (livré sous le nom InfiniteChatBot) prend un prompt en langage naturel et le fait tourner dans une boucle continue — génération, auto-test, évaluation, raffinement — propulsée par Gemini, sans intervention humaine entre les cycles. Chaque itération est journalisée sur disque, donc le chemin du premier brouillon jusqu'à la version finale reste consultable, pas seulement le résultat final.</p>
           </div>
           <div class="finding-stack">
-            <span class="tag">Python</span><span class="tag">holehe</span><span class="tag">sherlock</span>
-            <span class="tag">h8mail</span><span class="tag">Shodan</span><span class="tag">GHunt</span>
+            <span class="tag">Python</span><span class="tag">Google Gemini API</span>
           </div>
         </article>
 
-        <!-- TG-04 CTF -->
+        <!-- TryHackMe CTF -->
         <article class="finding reveal">
           <div class="finding-head">
-            <span class="finding-id">TG-04</span>
             <span class="finding-name"><span data-lang="en">TryHackMe CTF</span><span data-lang="fr" hidden>CTF TryHackMe</span></span>
           </div>
           <p class="finding-target">
-            <span data-lang="en"><b>Target:</b> a Flask/Werkzeug web app hiding admin access behind three separate weaknesses.</span>
-            <span data-lang="fr" hidden><b>Cible&nbsp;:</b> une application web Flask/Werkzeug cachant un accès admin derrière trois faiblesses distinctes.</span>
+            <span data-lang="en">A Flask/Werkzeug web app, hiding admin access behind three separate weaknesses.</span>
+            <span data-lang="fr" hidden>Une application web Flask/Werkzeug, cachant un accès admin derrière trois faiblesses distinctes.</span>
           </p>
           <div class="chain mono">
             <span class="chain-step">LFI</span><span class="chain-arrow">→</span>
@@ -269,15 +265,14 @@
           </div>
         </article>
 
-        <!-- TG-05 France Travail -->
+        <!-- Job Market Scraper -->
         <article class="finding reveal">
           <div class="finding-head">
-            <span class="finding-id">TG-05</span>
             <span class="finding-name"><span data-lang="en">Job Market Scraper</span><span data-lang="fr" hidden>Scraper marché de l'emploi</span></span>
           </div>
           <p class="finding-target">
-            <span data-lang="en"><b>Target:</b> manual job-market monitoring that doesn't scale and misses listings.</span>
-            <span data-lang="fr" hidden><b>Cible&nbsp;:</b> une veille emploi manuelle, difficile à tenir dans la durée et qui laisse passer des offres.</span>
+            <span data-lang="en">Manual job-market monitoring doesn't scale, and it misses listings.</span>
+            <span data-lang="fr" hidden>La veille emploi manuelle ne tient pas dans la durée, et elle laisse passer des offres.</span>
           </p>
           <div class="chain mono">
             <span class="chain-step">OAuth2</span><span class="chain-arrow">→</span>
