@@ -6,7 +6,7 @@
 
 :root {
   /* --- Color tokens (light) --- */
-  --ink:        #F5F2E7;   /* base background (paper) */
+  --ink:        #cfccc2;   /* base background (paper) */
   --panel:      #E9E4D1;   /* card / panel surface */
   --panel-hi:   #DDD7BF;   /* lifted / hover surface */
   --paper:      #17180F;   /* primary text (ink) */
