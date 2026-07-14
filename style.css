@@ -6,14 +6,14 @@
 
 :root {
   /* --- Color tokens (light) --- */
-  --ink:        #F5F2E7;   /* base background (paper) */
-  --panel:      #E9E4D1;   /* card / panel surface */
-  --panel-hi:   #DDD7BF;   /* lifted / hover surface */
-  --paper:      #17180F;   /* primary text (ink) */
+  --ink:        #F9F8F6;   /* base background (paper) */
+  --panel:      #EEEBE2;   /* card / panel surface */
+  --panel-hi:   #E5E0D1;   /* lifted / hover surface */
+  --paper:      #15160D;   /* primary text (ink) */
   --dim:        #63644E;   /* secondary / meta text */
   --amber:      #8C5118;   /* signal accent */
-  --amber-dim:  #E6D2A8;   /* soft amber, borders/backgrounds */
-  --line:       #B8B28E;   /* hairline dividers */
+  --amber-dim:  #EDDCC0;   /* soft amber, borders/backgrounds */
+  --line:       #C3B698;   /* hairline dividers */
 
   /* --- Type --- */
   --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
@@ -118,7 +118,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(245, 242, 231, 0.92);
+  background: rgba(249, 248, 246, 0.92);
   backdrop-filter: blur(6px);
   border-bottom: 1px solid var(--line);
 }
