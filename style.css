@@ -1,5 +1,5 @@
 /* ==========================================================================
-   TOGO — PORTFOLIO
+   ELMAHDI YANHA (TOGO) — PORTFOLIO
    Design concept: penetration-test engagement report, reimagined as a
    personal site. Executive summary / scope / findings / credentials.
    ========================================================================== */
@@ -124,8 +124,10 @@ body {
 }
 .header-top {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
   padding-block: 0.6rem;
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -135,9 +137,12 @@ body {
 }
 .status-pill {
   display: inline-flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.5em;
+  color: var(--paper);
+  line-height: 1.45;
 }
+.status-pill .status-dot { flex: none; transform: translateY(-1px); }
 .status-dot {
   width: 6px;
   height: 6px;
@@ -153,12 +158,21 @@ body {
   gap: 1rem;
 }
 .brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5em;
   font-family: var(--font-mono);
   font-weight: 600;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
 }
-.brand span { color: var(--amber); }
+.brand-name { color: var(--paper); }
+.brand-alias { color: var(--dim); font-weight: 400; }
+.brand-alias span { color: var(--amber); }
+
+@media (max-width: 520px) {
+  .brand-alias { display: none; }
+}
 .nav-links {
   display: flex;
   gap: clamp(0.9rem, 2vw, 1.6rem);
@@ -189,6 +203,13 @@ body {
   margin-block: 0.5rem 0.9rem;
   color: var(--paper);
 }
+.hero-alias {
+  font-size: 0.8rem;
+  color: var(--dim);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.1rem;
+}
+
 .hero-tagline {
   font-size: clamp(1.05rem, 2.4vw, 1.35rem);
   color: var(--dim);
@@ -338,6 +359,37 @@ html { scroll-behavior: smooth; }
   color: var(--paper);
   font-weight: 600;
 }
+/* Statut reel du projet : terminé / en cours / prototype / exercice.
+   Affiche a cote du titre pour qu'aucun projet ne se lise comme un
+   produit fini alors qu'il ne l'est pas. */
+.finding-status {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.3em 0.75em;
+  color: var(--dim);
+  background: var(--ink);
+}
+.finding-status.is-done  { color: var(--amber); border-color: var(--amber-dim); }
+.finding-status.is-live  { color: var(--amber); border-color: var(--amber-dim); background: var(--amber-dim); }
+.finding-status.is-wip   { color: var(--dim); }
+.finding-status.is-proto { color: var(--dim); border-style: dashed; }
+
+.finding-repo {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.75rem;
+  color: var(--dim);
+  letter-spacing: 0.03em;
+}
+.finding-repo a { border-bottom: 1px solid var(--line); }
+.finding-repo a:hover { color: var(--amber); border-bottom-color: var(--amber); }
+
 .finding-target {
   font-size: 0.96rem;
   color: var(--dim);
@@ -410,6 +462,14 @@ html { scroll-behavior: smooth; }
   .index-stack { text-align: left; }
 }
 
+.index-more {
+  margin-top: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+.index-more a { color: var(--amber); border-bottom: 1px solid var(--amber-dim); }
+.index-more a:hover { border-bottom-color: var(--amber); }
+
 /* ==========================================================================
    CREDENTIALS
    ========================================================================== */
@@ -448,6 +508,12 @@ html { scroll-behavior: smooth; }
    CONTACT / FOOTER
    ========================================================================== */
 .contact { }
+.contact-meta {
+  margin-top: 1.25rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: var(--dim);
+}
 .contact-links {
   display: flex;
   flex-wrap: wrap;

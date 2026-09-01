@@ -4,8 +4,8 @@
   /* ---------- Language toggle ---------- */
   var langButtons = document.querySelectorAll('[data-set-lang]');
   var titles = {
-    en: 'Togo — Offensive Security & Business',
-    fr: 'Togo — Sécurité offensive & Business'
+    fr: 'Elmahdi Yanha — Sécurité offensive & développement',
+    en: 'Elmahdi Yanha — Offensive Security & Development'
   };
 
   function setLang(lang) {
@@ -13,7 +13,7 @@
       el.hidden = el.getAttribute('data-lang') !== lang;
     });
     document.documentElement.setAttribute('lang', lang);
-    document.title = titles[lang] || titles.en;
+    document.title = titles[lang] || titles.fr;
 
     langButtons.forEach(function (btn) {
       btn.setAttribute('aria-pressed', String(btn.getAttribute('data-set-lang') === lang));
